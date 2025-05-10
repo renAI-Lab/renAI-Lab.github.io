@@ -23,12 +23,21 @@
       text-align: center;
       width: 100%;
       font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .student-card img {
       width: 150px;
       height: 150px;
       object-fit: cover;
       border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .student-card p {
+      margin: 0;
+      width: 150px; /* Match image width */
+      text-align: center;
     }
     .student-card a {
       text-decoration: none;
@@ -47,13 +56,13 @@
       margin: 20px 0;
     }
     .pi-left {
-      flex: 0 0 250px;
+      flex: 0 0 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     .pi-image {
-      width: 250px;
+      width: 300px;
       margin-bottom: 15px;
     }
     .pi-image img {
@@ -91,7 +100,7 @@
       text-decoration: underline;
     }
     .pi-info {
-      flex: 1;
+      flex: 0.8;
     }
   </style>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -109,7 +118,7 @@
 				<img src="images/yfung.png" alt="Yi R. (May) Fung">
 			</div>
 			<div class="pi-contact">
-				<p><font size="+3"><strong>Yi R. (May) Fung</strong></font></p>
+				<p><font size="+2"><strong>Yi R. (May) Fung</strong></font></p>
 				<p></p>
 				<p><a href="https://cse.hkust.edu.hk/" style="color:#9B0145;">Department of Computer Science and Engineering</a></p>
 				<p><a href="https://hkust.edu.hk/" style="color:#9B0145;">Hong Kong University of Science and Technology</a></p>
