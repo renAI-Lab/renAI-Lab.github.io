@@ -14,15 +14,15 @@
       <style>
     /* Example styling for a simple card layout */
     .student-gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 20px;
       margin-top: 10px;
-      justify-content: flex-start;
+      width: 100%;
     }
     .student-card {
       text-align: center;
-      width: calc(25% - 15px);
+      width: 100%;
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
@@ -143,44 +143,44 @@
 	</div>
 
 	<h1><a name="biography">PhD/MPhil Students (Thesis-Track)</h1>
-	    <div class="student-gallery">
-	    <div class="student-card">
-	      <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=XK4mvxUAAAAJ&citpid=8" alt="Profile for Rui Min">
-	      <p><a href="https://scholar.google.com/citations?user=XK4mvxUAAAAJ" target="_blank">Rui Min</a></p>
-	    </div>
-	    <div class="student-card">
-	      <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ULvoYXgAAAAJ&citpid=1" alt="Profile for Zhitao He">
-	      <p><a href="https://aclanthology.org/people/z/zhitao-he/" target="_blank">Zhitao He</a></p>
-	    </div>
-	    <div class="student-card">
-	      <img src="https://alan-qin.github.io/images/profile.jpg" alt="Profile for Zeyu Qin">
-	      <p><a href="https://alan-qin.github.io/" target="_blank">Zeyu Qin</a></p>
-	    </div>
-	    <div class="student-card">
-	      <img src="https://zhiyuan.fan/images/profile.png" alt="Profile for Zhiyuan Fan">
-	      <p><a href="https://zhiyuan.fan/" target="_blank">Zhiyuan Fan</a></p>
-	    </div>
-	    <div class="student-card">
-	      <img src="https://raw.githubusercontent.com/mayrfung/mayrfung.github.io/265750c18c9894f07d6a6e1f15e0a1b3665d4f8b/DadiGuo.jpg" alt="Profile for Dadi Guo">
-	      <p><a href="https://scholar.google.com/citations?user=5yHRd6kAAAAJ" target="_blank">Dadi Guo</a></p>
-	    </div>
-	    <div class="student-card">
-	      <img src="https://lukahhcm.github.io/images/profile2.jpg" alt="Profile for Yuchen Huang">
-	      <p><a href="https://lukahhcm.github.io/" target="_blank">Yuchen Huang</a></p>
-	    </div>
-	    <div class="student-card">
-	      <img src="https://joeying1019.github.io/images/android-chrome-512x512.png" alt="Profile for Shijue Huang">
-	      <p><a href="https://joeying1019.github.io/" target="_blank">Shijue Huang (incoming)</a></p>
-	    </div>
-	    <div class="student-card">
-	      <img src="https://zhaochen0110.github.io/images/szc.jpeg" alt="Profile for Zhaochen Su">
-	      <p>
-	        <a href="https://zhaochen0110.github.io/" target="_blank">
-	          Zhaochen Su (co-advised w/ Junxian)
-	        </a>
-	      </p>
-	    </div>
-	  </div>
+	<div class="student-gallery">
+		<div class="student-card">
+			<img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=XK4mvxUAAAAJ&citpid=8" alt="Profile for Rui Min">
+			<p><a href="https://scholar.google.com/citations?user=XK4mvxUAAAAJ" target="_blank">Rui Min</a></p>
+		</div>
+		<div class="student-card">
+			<img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ULvoYXgAAAAJ&citpid=1" alt="Profile for Zhitao He">
+			<p><a href="https://aclanthology.org/people/z/zhitao-he/" target="_blank">Zhitao He</a></p>
+		</div>
+		<div class="student-card">
+			<img src="https://alan-qin.github.io/images/profile.jpg" alt="Profile for Zeyu Qin">
+			<p><a href="https://alan-qin.github.io/" target="_blank">Zeyu Qin</a></p>
+		</div>
+		<div class="student-card">
+			<img src="https://zhiyuan.fan/images/profile.png" alt="Profile for Zhiyuan Fan">
+			<p><a href="https://zhiyuan.fan/" target="_blank">Zhiyuan Fan</a></p>
+		</div>
+		<div class="student-card">
+			<img src="https://raw.githubusercontent.com/mayrfung/mayrfung.github.io/265750c18c9894f07d6a6e1f15e0a1b3665d4f8b/DadiGuo.jpg" alt="Profile for Dadi Guo">
+			<p><a href="https://scholar.google.com/citations?user=5yHRd6kAAAAJ" target="_blank">Dadi Guo</a></p>
+		</div>
+		<div class="student-card">
+			<img src="https://lukahhcm.github.io/images/profile2.jpg" alt="Profile for Yuchen Huang">
+			<p><a href="https://lukahhcm.github.io/" target="_blank">Yuchen Huang</a></p>
+		</div>
+		<div class="student-card">
+			<img src="https://joeying1019.github.io/images/android-chrome-512x512.png" alt="Profile for Shijue Huang">
+			<p><a href="https://joeying1019.github.io/" target="_blank">Shijue Huang (incoming)</a></p>
+		</div>
+		<div class="student-card">
+			<img src="https://zhaochen0110.github.io/images/szc.jpeg" alt="Profile for Zhaochen Su">
+			<p>
+				<a href="https://zhaochen0110.github.io/" target="_blank">
+					Zhaochen Su (co-advised w/ Junxian)
+				</a>
+			</p>
+		</div>
+	</div>
 
 	<h1><a name="biography">Visiting PhD/MPhil Students</h1>
 	<ul>
