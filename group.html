@@ -14,16 +14,14 @@
       <style>
     /* Example styling for a simple card layout */
     .student-gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       margin-top: 10px;
-      justify-content: space-between;
     }
     .student-card {
       text-align: center;
-      width: calc(25% - 15px); /* 4 cards per row with gap */
-      min-width: 150px;
+      width: 100%;
       font-family: Arial, sans-serif;
     }
     .student-card img {
@@ -63,10 +61,26 @@
       height: auto;
       border-radius: 5px;
     }
+    .pi-contact {
+      margin-top: 15px;
+      line-height: 90%;
+      text-align: left;
+      width: 100%;
+    }
+    .pi-contact p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .pi-contact a {
+      color: #9B0145;
+      text-decoration: none;
+    }
+    .pi-contact a:hover {
+      text-decoration: underline;
+    }
     .pi-links {
+      margin-top: 15px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       gap: 10px;
     }
     .pi-links a {
@@ -78,20 +92,6 @@
     }
     .pi-info {
       flex: 1;
-    }
-    .pi-contact {
-      margin-top: 15px;
-      line-height: 1.6;
-    }
-    .pi-contact p {
-      margin: 5px 0;
-    }
-    .pi-contact a {
-      color: #9B0145;
-      text-decoration: none;
-    }
-    .pi-contact a:hover {
-      text-decoration: underline;
     }
   </style>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -109,6 +109,8 @@
 				<img src="images/yfung.png" alt="Yi R. (May) Fung">
 			</div>
 			<div class="pi-contact">
+				<p><font size="+3"><strong>Yi R. (May) Fung</strong></font></p>
+				<p></p>
 				<p><a href="https://cse.hkust.edu.hk/" style="color:#9B0145;">Department of Computer Science and Engineering</a></p>
 				<p><a href="https://hkust.edu.hk/" style="color:#9B0145;">Hong Kong University of Science and Technology</a></p>
 				<p><strong>Address:</strong> Clear Water Bay, Hong Kong SAR</p>
