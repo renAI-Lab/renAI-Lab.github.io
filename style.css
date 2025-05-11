@@ -98,25 +98,32 @@ a.back-to-top {
 .navbar {
     overflow: hidden;
     background-color: #f3f3f3;
-	border: 1px solid #e7e7e7;
-    width: 950px; text-align: center; position: relative;margin: 5px auto;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+    margin: 5px auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
  
-
 .navbar a {
-    float: left;
-    display: block;
+    display: inline-block;
     color: #666;
     text-align: center;
-    padding: 10px 30px;
+    padding: 10px 15px;
     text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .navbar a:hover:not(.active) {
-	color: white;
-	background-color: #ddd;
-  }
-
+    color: white;
+    background-color: #ddd;
+}
 
 .img-display {
     display : block;
