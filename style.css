@@ -40,32 +40,16 @@ name {
 }
 
 #wrapper {
-	border-width: 1px; 
-	border-style: solid; 
-	border-color: white; 
-	margin: 5px auto; 
-	width: 90%;  /* 改为百分比宽度 */
-	max-width: 1400px;  /* 设置最大宽度 */
-	min-width: 320px;   /* 设置最小宽度 */
-	text-align: center; 
-	position: relative;
+	border-width: 1px; border-style: solid; border-color: white; margin: 5px auto; width: 950px; text-align: center; position: relative;
 }
 
 #content-wrap {
-	background: white; 
-	margin: 0px; 
-	padding: 0px; 
-	width: 100%; 
-	text-align: justify; 
-	clear: both; 
-	float: left;
+	background: white; margin: 0px; padding: 0px; width: 100%; text-align: justify; clear: both; float: left;
 }
 
 #content {
-	padding: 16px 5% 5px 5%;  /* 调整内边距为百分比 */
-	text-align: center;
+	padding: 16px 35px 5px 35px; text-align: center;
 }
-
 div.b {
   text-align: left;
 }
@@ -111,68 +95,28 @@ a.back-to-top {
 	border-radius: 20px;
 }
 
-/* Navbar styles */
 .navbar {
-    background-color: white;
-    padding: 10px 30px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
+    background-color: #f3f3f3;
+	border: 1px solid #e7e7e7;
+    width: 950px; text-align: center; position: relative;margin: 5px auto;
 }
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-}
-
-.navbar-logo img {
-    height: 40px;  /* 设置固定高度，与导航栏高度匹配 */
-    width: auto;
-    padding: 0;  /* 移除默认的padding */
-    border: none;  /* 移除默认的边框 */
-    margin-right: 10px;
-}
-
-.navbar-logo span {
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-.navbar-right {
-    display: flex;
-    align-items: center;
-}
+ 
 
 .navbar a {
+    float: left;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 10px 30px;
     text-decoration: none;
-    color: #333;
-    font-size: 1.1em;
-    padding: 5px 15px;
-    margin: 0 5px;
-    display: inline-block;
-    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    color: #9B0145;
-}
+.navbar a:hover:not(.active) {
+	color: white;
+	background-color: #ddd;
+  }
 
-.navbar a.active {
-    color: #9B0145;
-    font-weight: 500;
-}
 
 .img-display {
     display : block;
@@ -348,74 +292,4 @@ background: #999;
 	border: none;
 	height: 3px; /* Adjust the height of the line */
 	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Multicolor gradient */
-}
-
-/* 添加响应式布局支持 */
-@media screen and (max-width: 768px) {
-    #wrapper {
-        width: 95%;  /* 在小屏幕上增加宽度占比 */
-    }
-    
-    #content {
-        padding: 16px 3% 5px 3%;  /* 在小屏幕上减少内边距 */
-    }
-}
-
-/* Student gallery styles */
-.student-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* 创建4列等宽布局 */
-    gap: 20px;  /* 设置卡片之间的间距 */
-    padding: 20px 0;
-    width: 100%;
-}
-
-.student-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.student-card img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;  /* 圆形图片 */
-    padding: 0;  /* 移除默认padding */
-    border: none;  /* 移除默认边框 */
-    margin-bottom: 10px;
-}
-
-.student-card p {
-    margin: 5px 0;
-    font-size: 1.1em;
-}
-
-.student-card a {
-    text-decoration: none;
-    color: #333;
-}
-
-.student-card a:hover {
-    color: #9B0145;
-}
-
-/* 响应式布局 */
-@media screen and (max-width: 1200px) {
-    .student-gallery {
-        grid-template-columns: repeat(3, 1fr);  /* 中等屏幕显示3列 */
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .student-gallery {
-        grid-template-columns: repeat(2, 1fr);  /* 小屏幕显示2列 */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .student-gallery {
-        grid-template-columns: 1fr;  /* 手机屏幕显示1列 */
-    }
 }
