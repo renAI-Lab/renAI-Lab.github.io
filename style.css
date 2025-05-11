@@ -40,16 +40,32 @@ name {
 }
 
 #wrapper {
-	border-width: 1px; border-style: solid; border-color: white; margin: 5px auto; width: 950px; text-align: center; position: relative;
+	border-width: 1px; 
+	border-style: solid; 
+	border-color: white; 
+	margin: 5px auto; 
+	width: 90%;  /* 改为百分比宽度 */
+	max-width: 1400px;  /* 设置最大宽度 */
+	min-width: 320px;   /* 设置最小宽度 */
+	text-align: center; 
+	position: relative;
 }
 
 #content-wrap {
-	background: white; margin: 0px; padding: 0px; width: 100%; text-align: justify; clear: both; float: left;
+	background: white; 
+	margin: 0px; 
+	padding: 0px; 
+	width: 100%; 
+	text-align: justify; 
+	clear: both; 
+	float: left;
 }
 
 #content {
-	padding: 16px 35px 5px 35px; text-align: center;
+	padding: 16px 5% 5px 5%;  /* 调整内边距为百分比 */
+	text-align: center;
 }
+
 div.b {
   text-align: left;
 }
@@ -95,34 +111,69 @@ a.back-to-top {
 	border-radius: 20px;
 }
 
+/* Navbar styles */
 .navbar {
-    overflow: hidden;
-    background-color: #f3f3f3;
-    border: 1px solid #e7e7e7;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
-    position: relative;
-    margin: 5px auto;
-    white-space: nowrap;
+    background-color: white;
+    padding: 10px 30px;
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
- 
-.navbar a {
-    display: inline-block;
-    color: #666;
-    text-align: center;
-    padding: 10px 15px;
-    text-decoration: none;
-    white-space: nowrap;
-    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar a:hover:not(.active) {
-    color: white;
-    background-color: #ddd;
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-logo img {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+}
+
+.navbar-logo span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #9B0145;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95em;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #9B0145;
+    background-color: rgba(155, 1, 69, 0.1);
+}
+
+.navbar a.active {
+    color: #9B0145;
+    font-weight: 500;
 }
 
 .img-display {
@@ -299,4 +350,15 @@ background: #999;
 	border: none;
 	height: 3px; /* Adjust the height of the line */
 	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Multicolor gradient */
+}
+
+/* 添加响应式布局支持 */
+@media screen and (max-width: 768px) {
+    #wrapper {
+        width: 95%;  /* 在小屏幕上增加宽度占比 */
+    }
+    
+    #content {
+        padding: 16px 3% 5px 3%;  /* 在小屏幕上减少内边距 */
+    }
 }
