@@ -120,6 +120,39 @@ a.back-to-top {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-logo img {
+    height: 40px;  /* 设置固定高度，与导航栏高度匹配 */
+    width: auto;
+    padding: 0;  /* 移除默认的padding */
+    border: none;  /* 移除默认的边框 */
+    margin-right: 10px;
+}
+
+.navbar-logo span {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
 }
 
 .navbar a {
@@ -325,5 +358,64 @@ background: #999;
     
     #content {
         padding: 16px 3% 5px 3%;  /* 在小屏幕上减少内边距 */
+    }
+}
+
+/* Student gallery styles */
+.student-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 创建4列等宽布局 */
+    gap: 20px;  /* 设置卡片之间的间距 */
+    padding: 20px 0;
+    width: 100%;
+}
+
+.student-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.student-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;  /* 圆形图片 */
+    padding: 0;  /* 移除默认padding */
+    border: none;  /* 移除默认边框 */
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.student-card a {
+    text-decoration: none;
+    color: #333;
+}
+
+.student-card a:hover {
+    color: #9B0145;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 1200px) {
+    .student-gallery {
+        grid-template-columns: repeat(3, 1fr);  /* 中等屏幕显示3列 */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .student-gallery {
+        grid-template-columns: repeat(2, 1fr);  /* 小屏幕显示2列 */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .student-gallery {
+        grid-template-columns: 1fr;  /* 手机屏幕显示1列 */
     }
 }
